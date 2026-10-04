@@ -160,7 +160,7 @@ export const data: Category[] = [
                 name: "WorldSeedEntityEngine",
                 description: "Allows you to create advanced Bedrock-like multipart entities.",
                 link: "https://github.com/AtlasEngineCa/WorldSeedEntityEngine",
-                version: "1.21.11"
+                version: "26.2"
             },
             {
                 name: "AtlasProjectiles",
@@ -220,7 +220,7 @@ export const data: Category[] = [
                 name: "Blocks and Stuff",
                 description: "Common block and fluid implementations for Minestom.",
                 link: "https://github.com/everbuild-org/blocks-and-stuff",
-                version: "26.1.2"
+                version: "26.3"
             },
             {
                 name: "minecraft-heads-minestom",
