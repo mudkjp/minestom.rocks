@@ -226,7 +226,7 @@ export const data: Category[] = [
                 name: "minecraft-heads-minestom",
                 description: "Minecraft-Heads.com integration for Minestom.",
                 link: "https://github.com/everbuild-org/minecraft-heads-minestom",
-                version: "1.21.9"
+                version: "26.2"
             },
             {
                 name: "minecraft-utils",
