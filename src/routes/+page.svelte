@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    import ResourceList from "$lib/components/ResourceList.svelte";
-    import ServerCard from "$lib/components/ServerCard.svelte";
+    import ResourceList from "#lib/components/ResourceList.svelte";
+    import ServerCard from "#lib/components/ServerCard.svelte";
     import type { PageProps } from "./$types";
 
     let { data }: PageProps = $props();

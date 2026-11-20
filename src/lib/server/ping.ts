@@ -1,5 +1,5 @@
 import { Buffer } from "node:buffer";
-import { data, type Server } from "$lib/data";
+import { data, type Server } from "#lib/data.ts";
 
 type Connect = typeof import("cloudflare:sockets").connect;
 
@@ -18,6 +18,7 @@ const DEFAULT_PORT = 25565;
 const HANDSHAKE_PROTOCOL_VERSION = 0;
 
 const PROTOCOL_VERSIONS: Record<number, string> = {
+    777: "26.3",
     776: "26.2",
     775: "26.1.2",
     774: "1.21.11",

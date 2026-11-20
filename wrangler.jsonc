@@ -1,0 +1,11 @@
+{
+    "$schema": "./node_modules/wrangler/config-schema.json",
+    "name": "minestom-rocks",
+    "compatibility_date": "2026-11-19",
+    "compatibility_flags": [
+        "nodejs_compat"
+    ],
+    "observability": {
+        "enabled": true
+    }
+}

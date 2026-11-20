@@ -1,4 +1,3 @@
-import { json } from "@sveltejs/kit";
 import type { RequestHandler } from "./$types";
 
 export const GET: RequestHandler = async ({ url }) => {
@@ -6,7 +5,7 @@ export const GET: RequestHandler = async ({ url }) => {
     const artifactId = url.searchParams.get("artifact");
 
     if (!groupId || !artifactId) {
-        return json({ error: "Missing parameters" }, { status: 400 });
+        return Response.json({ error: "Missing parameters" }, { status: 400 });
     }
 
     try {
@@ -15,11 +14,11 @@ export const GET: RequestHandler = async ({ url }) => {
         const version = (text.match(/<latest>(.*?)<\/latest>/) || text.match(/<release>(.*?)<\/release>/))?.[1];
 
         if (!version) {
-            return json({ error: "Version not found" }, { status: 404 });
+            return Response.json({ error: "Version not found" }, { status: 404 });
         }
 
-        return json({ version });
+        return Response.json({ version });
     } catch {
-        return json({ error: "Failed to fetch version" }, { status: 500 });
+        return Response.json({ error: "Failed to fetch version" }, { status: 500 });
     }
 };

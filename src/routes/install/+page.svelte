@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    import CodePanel from "$lib/components/CodePanel.svelte";
-    import GeneratorForm from "$lib/components/GeneratorForm.svelte";
+    import CodePanel from "#lib/components/CodePanel.svelte";
+    import GeneratorForm from "#lib/components/GeneratorForm.svelte";
     import {
         fetchLatestRelease,
         generateGroovyCode,
@@ -10,7 +10,7 @@
         minestom,
         optionalDependencies,
         type Configuration
-    } from "$lib/generator";
+    } from "#lib/generator.ts";
 
     let dsl = $state<Configuration["dsl"]>("kotlin");
     let language = $state<Configuration["language"]>("java");

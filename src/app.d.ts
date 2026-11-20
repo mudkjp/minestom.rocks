@@ -1,4 +1,4 @@
-import type { PingerState } from "$lib/server/ping";
+import type { PingerState } from "#lib/server/ping.ts";
 
 declare global {
     // eslint-disable-next-line no-var

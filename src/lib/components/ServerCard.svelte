@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { ServerStatus } from "$lib/server/ping";
+    import type { ServerStatus } from "#lib/server/ping.ts";
 
     interface Props {
         name: string;

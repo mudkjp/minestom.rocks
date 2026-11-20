@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { optionalDependencies, type Configuration } from "$lib/generator";
+    import { optionalDependencies, type Configuration } from "#lib/generator.ts";
 
     interface Props {
         dsl: Configuration["dsl"];

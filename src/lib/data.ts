@@ -28,7 +28,7 @@ interface Category {
     items: (Item | Server)[];
 }
 
-export const latestVersion = "26.2";
+export const latestVersion = "26.3";
 export const supportsLatestVersion = (version: string | undefined): boolean =>
     version === undefined || version === latestVersion;
 
@@ -148,13 +148,13 @@ export const data: Category[] = [
                 name: "Polar",
                 description: "A fast and small world format for Minestom.",
                 link: "https://github.com/hollow-cube/polar",
-                version: "26.1.2"
+                version: "26.2"
             },
             {
                 name: "Schem",
                 description: "A schematic reader and writer library for Minestom.",
                 link: "https://github.com/hollow-cube/schem",
-                version: "1.21.10"
+                version: "26.2"
             },
             {
                 name: "WorldSeedEntityEngine",
@@ -166,7 +166,7 @@ export const data: Category[] = [
                 name: "AtlasProjectiles",
                 description: "Implementations for arrows, fireballs, snowballs, and more.",
                 link: "https://github.com/AtlasEngineCa/AtlasProjectiles",
-                version: "1.21.11"
+                version: "26.2"
             },
             {
                 name: "Trove",
@@ -184,7 +184,7 @@ export const data: Category[] = [
                 name: "KotStom",
                 description: "Kotlinizes Minestom with extension functions and utilities.",
                 link: "https://github.com/bladehuntmc/KotStom",
-                version: "1.21.7"
+                version: "26.2"
             },
             {
                 name: "LuckPerms",
@@ -208,7 +208,7 @@ export const data: Category[] = [
                 name: "Terra",
                 description: "A popular world generation plugin which supports Minestom.",
                 link: "https://github.com/PolyhedralDev/Terra",
-                version: "1.21.8"
+                version: "26.3"
             },
             {
                 name: "NBStom",
@@ -314,7 +314,7 @@ export const data: Category[] = [
                 name: "BlockPhysics",
                 description: "A Minecraft physics playground powered by display entities.",
                 link: "https://github.com/emortaldev/BlockPhysics",
-                version: "1.21.10"
+                version: "26.3"
             },
             {
                 name: "minestom-version-cli",

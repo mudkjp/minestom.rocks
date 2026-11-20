@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from "svelte";
     import type { Highlighter } from "shiki";
-    import type { Configuration } from "$lib/generator";
+    import type { Configuration } from "#lib/generator.ts";
 
     interface Props {
         code: string;

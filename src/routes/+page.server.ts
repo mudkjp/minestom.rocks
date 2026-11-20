@@ -1,5 +1,5 @@
-import { compareVersions, data, latestVersion, supportsLatestVersion, type Item, type Server } from "$lib/data";
-import { getServerStatus, initializePinger } from "$lib/server/ping";
+import { compareVersions, data, latestVersion, supportsLatestVersion, type Item, type Server } from "#lib/data.ts";
+import { getServerStatus, initializePinger } from "#lib/server/ping.ts";
 import type { PageServerLoad } from "./$types";
 
 const resolveVersion = (item: Item | Server): string | undefined =>

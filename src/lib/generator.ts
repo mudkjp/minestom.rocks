@@ -39,11 +39,13 @@ export interface Configuration {
 }
 
 const javaVersion = "25";
-const shadowVersion = "9.3.1";
-const kotlinVersion = "2.3.0";
-const tinylogVersion = "2.8.0-M1";
-const logbackVersion = "1.5.24";
-const slf4jSimpleVersion = "2.0.17";
+const shadowVersion = "9.6.1";
+const kotlinVersion = "2.4.21";
+const tinylogVersion = "2.8.1";
+const logbackVersion = "1.6.8";
+const slf4jSimpleVersion = "2.0.20";
+const mavenCompilerVersion = "3.16.0";
+const mavenShadeVersion = "3.6.2";
 
 export const minestom: Dependency = {
     name: "Minestom",
@@ -247,7 +249,7 @@ export function generateMavenCode(configuration: Configuration, resolvedVersions
     code += `        <maven.compiler.target>${javaVersion}</maven.compiler.target>\n`;
     code += `        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\n`;
     if (configuration.language === "kotlin") {
-        const resolvedKotlinVersion = resolvedVersions["kotlin"] || "2.3.0";
+        const resolvedKotlinVersion = resolvedVersions["kotlin"] || kotlinVersion;
         code += `        <kotlin.version>${resolvedKotlinVersion}</kotlin.version>\n`;
     }
     code += `    </properties>\n`;
@@ -300,29 +302,29 @@ export function generateMavenCode(configuration: Configuration, resolvedVersions
         code += `        <dependency>\n`;
         code += `            <groupId>org.tinylog</groupId>\n`;
         code += `            <artifactId>tinylog-api` + (configuration.language === "kotlin" ? "-kotlin" : "") + `</artifactId>\n`;
-        code += `            <version>2.8.0-M1</version>\n`;
+        code += `            <version>${tinylogVersion}</version>\n`;
         code += `        </dependency>\n`;
         code += `        <dependency>\n`;
         code += `            <groupId>org.tinylog</groupId>\n`;
         code += `            <artifactId>tinylog-impl</artifactId>\n`;
-        code += `            <version>2.8.0-M1</version>\n`;
+        code += `            <version>${tinylogVersion}</version>\n`;
         code += `        </dependency>\n`;
         code += `        <dependency>\n`;
         code += `            <groupId>org.tinylog</groupId>\n`;
         code += `            <artifactId>slf4j-tinylog</artifactId>\n`;
-        code += `            <version>2.8.0-M1</version>\n`;
+        code += `            <version>${tinylogVersion}</version>\n`;
         code += `        </dependency>\n`;
     } else if (configuration.logger === "logback") {
         code += `        <dependency>\n`;
         code += `            <groupId>ch.qos.logback</groupId>\n`;
         code += `            <artifactId>logback-classic</artifactId>\n`;
-        code += `            <version>1.5.24</version>\n`;
+        code += `            <version>${logbackVersion}</version>\n`;
         code += `        </dependency>\n`;
     } else if (configuration.logger === "simple") {
         code += `        <dependency>\n`;
         code += `            <groupId>org.slf4j</groupId>\n`;
         code += `            <artifactId>slf4j-simple</artifactId>\n`;
-        code += `            <version>2.0.17</version>\n`;
+        code += `            <version>${slf4jSimpleVersion}</version>\n`;
         code += `        </dependency>\n`;
     }
 
@@ -361,12 +363,12 @@ export function generateMavenCode(configuration: Configuration, resolvedVersions
     code += `            <plugin>\n`;
     code += `                <groupId>org.apache.maven.plugins</groupId>\n`;
     code += `                <artifactId>maven-compiler-plugin</artifactId>\n`;
-    code += `                <version>3.13.0</version>\n`;
+    code += `                <version>${mavenCompilerVersion}</version>\n`;
     code += `            </plugin>\n`;
     code += `            <plugin>\n`;
     code += `                <groupId>org.apache.maven.plugins</groupId>\n`;
     code += `                <artifactId>maven-shade-plugin</artifactId>\n`;
-    code += `                <version>3.6.0</version>\n`;
+    code += `                <version>${mavenShadeVersion}</version>\n`;
     code += `                <executions>\n`;
     code += `                    <execution>\n`;
     code += `                        <phase>package</phase>\n`;
