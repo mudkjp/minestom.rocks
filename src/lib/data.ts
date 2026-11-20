@@ -217,8 +217,8 @@ export const data: Category[] = [
                 version: "1.21.8"
             },
             {
-                name: "Tools and Twadde",
-                description: "Pluggable serverside modding framework for Minestom",
+                name: "Tools and Twaddle",
+                description: "Pluggable server-side modding framework for Minestom",
                 link: "https://github.com/everbuild-org/tools-and-twaddle",
                 version: "26.2"
             },
